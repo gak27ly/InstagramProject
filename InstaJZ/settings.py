@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Insta',
+    'imagekit',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +56,7 @@ ROOT_URLCONF = 'InstaJZ.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # 在base dir 里面找到templates
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -119,3 +121,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static')]
+
+LOGIN_REDIRECT_URL = 'posts'
+
+LOGOUT_REDIRECT_URL = 'posts'
+
+#use out customied model instead of django user model
+AUTH_USER_MODEL = 'Insta.InstaUser'
