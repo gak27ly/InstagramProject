@@ -5,9 +5,11 @@
 {% block content %}
 
 <div class="row single-post">
+
     <div class="single-post-card view-update {{ object.pk }}">
+
         <div class="header">
-            <a href="{% url 'helloworld' %}">
+            <a href="{% url 'user_detail' object.author.pk  %}">
                 {% if object.author.profile_pic %}
                     <img class="picture-circle--medium" src="{{object.author.profile_pic.url}}">
                 {% endif %}
@@ -31,7 +33,7 @@
             <ul class="comment-list">
                 {% for comment in object.comments.all %}
                 <li class="comment-list__comment">
-                    <a href="{% url 'helloworld' %}" class="user">
+                    <a href="{% url 'user_detail' comment.user.pk %}" class="user">
                         {{ comment.user.username }}
                     </a>
                     <span class="comment">{{ comment.comment }}</span>
