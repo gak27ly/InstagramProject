@@ -2,7 +2,7 @@ from annoying.decorators import ajax_request
 from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse, reverse_lazy
-from Insta.models import Post, Like, InstaUser, Comment
+from Insta.models import Post, Like, InstaUser, Comment, UserConnection
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
