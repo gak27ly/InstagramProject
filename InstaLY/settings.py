@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'InstaJZ.urls'
+ROOT_URLCONF = 'InstaLY.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'InstaJZ.wsgi.application'
+WSGI_APPLICATION = 'InstaLY.wsgi.application'
 
 
 # Database
