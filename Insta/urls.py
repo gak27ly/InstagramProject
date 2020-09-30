@@ -22,7 +22,7 @@ from Insta.views import (HelloWorld, PostsView, PostDetailView, PostCreateView,
 
 
 urlpatterns = [
-    path('/helloworld', HelloWorld.as_view(), name='helloworld'),
+    path('helloworld', HelloWorld.as_view(), name='helloworld'),
     path('', PostsView.as_view(), name='posts'),
     #find the input integer as pk in the objects passed in, and render that in PostDetailView's 
     #html template
